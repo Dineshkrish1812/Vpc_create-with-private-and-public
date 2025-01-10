@@ -214,7 +214,7 @@ resource "aws_instance" "Dinesh_pub" {
   ami                         = "ami-053b12d3152c0cc71"
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.mypub.id
-  vpc_security_group_ids      = [aws_security_group.pri_sg.id]
+  vpc_security_group_ids      = [aws_security_group.pub-sg.id]
   associate_public_ip_address = true
 
 
@@ -227,7 +227,7 @@ resource "aws_instance" "Dinesh_pri" {
   ami                    = "ami-053b12d3152c0cc71"
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.mypri.id
-  vpc_security_group_ids = [aws_security_group.public-sg.id]
+  vpc_security_group_ids = [aws_security_group.pri-sg.id]
 
 
 
